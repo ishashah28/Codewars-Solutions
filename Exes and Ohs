@@ -1,0 +1,28 @@
+Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. 
+The string can contains any char.
+
+Examples input/output:
+
+XO("ooxx") => true
+XO("xooxx") => false
+XO("ooxXm") => true
+XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+XO("zzoo") => false
+
+#My Solution
+def xo(s):
+    if type(s) == int or type(s) == float:
+        print("This is not a string")
+    count_o = 0
+    count_x = 0
+    print(s)
+    for letter in s.lower():
+        if letter == 'o':
+            count_o+=1
+        if letter == 'x':
+            count_x+=1
+    if count_o == count_x:
+        return True
+    else:
+        return False
+xo("ooxxo")
