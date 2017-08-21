@@ -1,0 +1,16 @@
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, and u as vowels for this Kata.
+
+#My Solution
+
+def getCount(inputStr):
+    num_vowels = 0
+    # your code here
+    vowels = 'aeiou'
+    for letter in vowels:
+        num_vowels = num_vowels + inputStr.count(letter)
+        #print(num_vowels)
+    return num_vowels
+    
+getCount("shshiertyd")
