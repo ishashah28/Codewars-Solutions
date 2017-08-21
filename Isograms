@@ -1,0 +1,25 @@
+An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a 
+string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+is_isogram("Dermatoglyphics" ) == true
+is_isogram("aba" ) == false
+is_isogram("moOse" ) == false # -- ignore letter case
+
+#My Solution
+
+def is_isogram(string):
+    #your code here
+    s = string.lower()
+    count = 0
+    for i in s:
+        p = s.count(i)
+        if p == 1 or p == 0:
+            count += 0
+        else:
+            count += 1
+    if count == 0:
+        return True
+    else:
+        return False
+is_isogram("ishashah")
+        
